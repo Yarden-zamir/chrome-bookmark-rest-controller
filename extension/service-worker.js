@@ -1,6 +1,6 @@
 const DEFAULT_SETTINGS = {
   apiBaseUrl: "http://127.0.0.1:8877",
-  clientId: "chrome-bookmark-rest-controller",
+  clientId: "bookmarkctl",
   enabled: true,
   pollIntervalSeconds: 5,
 };

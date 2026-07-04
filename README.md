@@ -1,4 +1,8 @@
-# Chrome Bookmark REST Controller
+# bookmarkctl
+
+```bash
+brew install Yarden-zamir/tap/bookmarkctl
+```
 
 A Manifest V3 Chrome extension controlled by a local FastAPI command queue and a Typer CLI.
 
@@ -23,12 +27,6 @@ Keep it bound to `127.0.0.1`. Binding to `0.0.0.0` lets anyone who can reach the
 uv sync
 ```
 
-Homebrew install after release:
-
-```bash
-brew install Yarden-zamir/tap/chrome-bookmark-rest-controller
-```
-
 ## Load The Extension
 
 1. Open `chrome://extensions`.
@@ -39,7 +37,7 @@ brew install Yarden-zamir/tap/chrome-bookmark-rest-controller
 The popup defaults should work:
 
 - API base URL: `http://127.0.0.1:8877`
-- Client ID: `chrome-bookmark-rest-controller`
+- Client ID: `bookmarkctl`
 - Poll interval: `5`
 - Enabled: checked
 

@@ -1,7 +1,7 @@
 # typed: false
 # frozen_string_literal: true
 
-class ChromeBookmarkRestController < Formula
+class Bookmarkctl < Formula
   include Language::Python::Virtualenv
 
   desc "Control Chrome bookmarks through a local FastAPI queue and CLI"

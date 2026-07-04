@@ -1,6 +1,6 @@
 [project]
-name = "chrome-bookmark-rest-controller"
-version = "0.1.0"
+name = "bookmarkctl"
+version = "0.2.0"
 description = "Control Chrome bookmarks through a local FastAPI command queue and Typer CLI."
 authors = [
     { name = "Yarden Zamir", email = "dev@yarden-zamir.com" }
@@ -15,8 +15,7 @@ dependencies = [
 ]
 
 [project.scripts]
-bookmarkctl = "chrome_bookmark_rest_controller.cli:app"
-chrome-bookmark-rest-controller = "chrome_bookmark_rest_controller.cli:app"
+bookmarkctl = "bookmarkctl.cli:app"
 
 [build-system]
 requires = ["uv_build>=0.11.26,<0.12.0"]

@@ -31,7 +31,7 @@ console = Console()
 
 @app.command()
 def server(host: str = HOST, port: int = PORT) -> None:
-    uvicorn.run("chrome_bookmark_rest_controller.api:app", host=host, port=port, log_level="info")
+    uvicorn.run("bookmarkctl.api:app", host=host, port=port, log_level="info")
 
 
 @app.command()
@@ -125,7 +125,7 @@ def server_context(base_url: str) -> Iterator[str]:
     with tempfile.TemporaryDirectory(prefix="bookmarkctl-") as temp_dir:
         env = os.environ.copy()
         env.setdefault("BOOKMARKCTL_STATE", str(Path(temp_dir) / "commands.json"))
-        process = subprocess.Popen([sys.executable, "-m", "uvicorn", "chrome_bookmark_rest_controller.api:app", "--host", host, "--port", str(port), "--log-level", "warning"], env=env, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        process = subprocess.Popen([sys.executable, "-m", "uvicorn", "bookmarkctl.api:app", "--host", host, "--port", str(port), "--log-level", "warning"], env=env, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         try:
             wait_server(active, process)
             yield active

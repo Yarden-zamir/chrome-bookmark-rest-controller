@@ -12,7 +12,7 @@ def default_state_path() -> Path:
     override = os.environ.get("BOOKMARKCTL_STATE")
     if override:
         return Path(override).expanduser()
-    return Path.home() / ".local" / "state" / "chrome-bookmark-rest-controller" / "commands.json"
+    return Path.home() / ".local" / "state" / "bookmarkctl" / "commands.json"
 
 
 class CommandStore:

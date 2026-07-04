@@ -8,7 +8,7 @@ from uuid import uuid4
 from pydantic import BaseModel, ConfigDict, Field, field_validator
 
 
-DEFAULT_CLIENT_ID = "chrome-bookmark-rest-controller"
+DEFAULT_CLIENT_ID = "bookmarkctl"
 
 
 class CommandStatus(StrEnum):

@@ -10,7 +10,7 @@ from .store import CommandStore
 
 
 store = CommandStore()
-app = FastAPI(title="Chrome Bookmark REST Controller")
+app = FastAPI(title="bookmarkctl")
 
 app.add_middleware(
     CORSMiddleware,
